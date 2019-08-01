@@ -8,18 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1E17F4102724BE419FEC59EF /* Pods_AWSNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71507DD1A601048380955600 /* Pods_AWSNotes.framework */; };
+		DA453BD022F28DCB00C7E45C /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DA453BCF22F28DCB00C7E45C /* awsconfiguration.json */; };
+		DA453BD622F28E9300C7E45C /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA453BD522F28E9300C7E45C /* Note.swift */; };
 		DA8C9CA422F261FB0008018B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8C9CA322F261FB0008018B /* AppDelegate.swift */; };
 		DA8C9CA622F261FB0008018B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8C9CA522F261FB0008018B /* ViewController.swift */; };
 		DA8C9CA922F261FB0008018B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8C9CA722F261FB0008018B /* Main.storyboard */; };
 		DA8C9CAB22F261FE0008018B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8C9CAA22F261FE0008018B /* Assets.xcassets */; };
 		DA8C9CAE22F261FE0008018B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8C9CAC22F261FE0008018B /* LaunchScreen.storyboard */; };
-		DAE08F6B22F2671B0064DF04 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DAE08F6A22F2671B0064DF04 /* awsconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5372CDDDA7FAE0E40319695E /* Pods-AWSNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSNotes.release.xcconfig"; path = "Target Support Files/Pods-AWSNotes/Pods-AWSNotes.release.xcconfig"; sourceTree = "<group>"; };
 		71507DD1A601048380955600 /* Pods_AWSNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF42A70AA409D5CF41BA2CB9 /* Pods-AWSNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSNotes.debug.xcconfig"; path = "Target Support Files/Pods-AWSNotes/Pods-AWSNotes.debug.xcconfig"; sourceTree = "<group>"; };
+		DA453BCF22F28DCB00C7E45C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		DA453BD522F28E9300C7E45C /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		DA8C9CA022F261FB0008018B /* AWSNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8C9CA322F261FB0008018B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA8C9CA522F261FB0008018B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,7 +30,6 @@
 		DA8C9CAA22F261FE0008018B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA8C9CAD22F261FE0008018B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8C9CAF22F261FE0008018B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DAE08F6A22F2671B0064DF04 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DA453BD322F28E9300C7E45C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA453BD422F28E9300C7E45C /* NoSQL */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DA453BD422F28E9300C7E45C /* NoSQL */ = {
+			isa = PBXGroup;
+			children = (
+				DA453BD522F28E9300C7E45C /* Note.swift */,
+			);
+			path = NoSQL;
+			sourceTree = "<group>";
+		};
 		DA8C9C9722F261FB0008018B = {
 			isa = PBXGroup;
 			children = (
@@ -80,8 +98,9 @@
 		DA8C9CA222F261FB0008018B /* AWSNotes */ = {
 			isa = PBXGroup;
 			children = (
+				DA453BD322F28E9300C7E45C /* Models */,
+				DA453BCF22F28DCB00C7E45C /* awsconfiguration.json */,
 				DA8C9CA322F261FB0008018B /* AppDelegate.swift */,
-				DAE08F6A22F2671B0064DF04 /* awsconfiguration.json */,
 				DA8C9CA522F261FB0008018B /* ViewController.swift */,
 				DA8C9CA722F261FB0008018B /* Main.storyboard */,
 				DA8C9CAA22F261FE0008018B /* Assets.xcassets */,
@@ -151,7 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAE08F6B22F2671B0064DF04 /* awsconfiguration.json in Resources */,
+				DA453BD022F28DCB00C7E45C /* awsconfiguration.json in Resources */,
 				DA8C9CAE22F261FE0008018B /* LaunchScreen.storyboard in Resources */,
 				DA8C9CAB22F261FE0008018B /* Assets.xcassets in Resources */,
 				DA8C9CA922F261FB0008018B /* Main.storyboard in Resources */,
@@ -209,6 +228,7 @@
 			files = (
 				DA8C9CA622F261FB0008018B /* ViewController.swift in Sources */,
 				DA8C9CA422F261FB0008018B /* AppDelegate.swift in Sources */,
+				DA453BD622F28E9300C7E45C /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

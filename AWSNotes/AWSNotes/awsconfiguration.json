@@ -20,6 +20,11 @@
       "Region": "us-east-2"
     }
   },
+  "DynamoDBObjectMapper": {
+    "Default": {
+      "Region": "us-east-2"
+    }
+  },
   "PinpointAnalytics": {
     "Default": {
       "AppId": "376469152b934ee6a687a1ca6b68a51c",

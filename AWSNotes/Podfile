@@ -10,5 +10,6 @@ target 'AWSNotes' do
     pod 'AWSMobileClient'
     pod 'AWSUserPoolsSignIn'
     pod 'AWSAuthUI'
+    pod 'AWSDynamoDB'
 
 end
