@@ -4,6 +4,8 @@ PODS:
   - AWSAuthUI (2.9.10):
     - AWSAuthCore (= 2.9.10)
     - AWSCore (= 2.9.10)
+  - AWSCognito (2.9.10):
+    - AWSCore (= 2.9.10)
   - AWSCognitoIdentityProvider (2.9.10):
     - AWSCognitoIdentityProviderASF (= 1.0.1)
     - AWSCore (= 2.9.10)
@@ -14,37 +16,45 @@ PODS:
   - AWSMobileClient (2.9.10):
     - AWSAuthCore (= 2.9.10)
     - AWSCognitoIdentityProvider (= 2.9.10)
+  - AWSS3 (2.9.10):
+    - AWSCore (= 2.9.10)
   - AWSUserPoolsSignIn (2.9.10):
     - AWSAuthCore (= 2.9.10)
     - AWSCognitoIdentityProvider (= 2.9.10)
 
 DEPENDENCIES:
   - AWSAuthUI
+  - AWSCognito
   - AWSDynamoDB
   - AWSMobileClient
+  - AWSS3
   - AWSUserPoolsSignIn
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AWSAuthCore
     - AWSAuthUI
+    - AWSCognito
     - AWSCognitoIdentityProvider
     - AWSCognitoIdentityProviderASF
     - AWSCore
     - AWSDynamoDB
     - AWSMobileClient
+    - AWSS3
     - AWSUserPoolsSignIn
 
 SPEC CHECKSUMS:
   AWSAuthCore: d6d222a7eeae403f968afb5b9b3975bd96340d91
   AWSAuthUI: 5d6e6c81c5a2cc4dbd9a9657eeea649894dab164
+  AWSCognito: 1dd5b0e1d9e0706f9757ccce7c6fad9dc1d25ddb
   AWSCognitoIdentityProvider: 5e72467f174a970e9d357fc06666e3f32e6eda70
   AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
   AWSCore: 22b6bbc6761ca9981d878155d11bc02edd681a64
   AWSDynamoDB: 87d0b2f44fc85f719921ad2df0dcc4c31c9be96a
   AWSMobileClient: a0768be5b34a5a2eb39fd3fcd5d4f14125d4ebbb
+  AWSS3: fe0221519fe4d05adf4c3fdf0cb4477f5e433ee6
   AWSUserPoolsSignIn: 825d6f5c6beaa6f3b11d863d4f43031b1da5e6b0
 
-PODFILE CHECKSUM: d70c763cd2fc2e356d50a4b05235c6c554eb62b9
+PODFILE CHECKSUM: 1136cd2724361ba61573d2bd9f91c95e1d10b642
 
 COCOAPODS: 1.7.2

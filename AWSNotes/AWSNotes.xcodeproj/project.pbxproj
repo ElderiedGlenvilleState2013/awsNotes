@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1E17F4102724BE419FEC59EF /* Pods_AWSNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71507DD1A601048380955600 /* Pods_AWSNotes.framework */; };
-		DA453BD022F28DCB00C7E45C /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DA453BCF22F28DCB00C7E45C /* awsconfiguration.json */; };
+		DA22E36522F3D06200813A69 /* boarder terrier .jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA22E36422F3D06200813A69 /* boarder terrier .jpg */; };
+		DA22E36722F3DDC900813A69 /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA22E36622F3DDC900813A69 /* cat.jpg */; };
 		DA453BD622F28E9300C7E45C /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA453BD522F28E9300C7E45C /* Note.swift */; };
+		DA453BD822F3336600C7E45C /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DA453BD722F3336600C7E45C /* awsconfiguration.json */; };
 		DA8C9CA422F261FB0008018B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8C9CA322F261FB0008018B /* AppDelegate.swift */; };
 		DA8C9CA622F261FB0008018B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8C9CA522F261FB0008018B /* ViewController.swift */; };
 		DA8C9CA922F261FB0008018B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8C9CA722F261FB0008018B /* Main.storyboard */; };
@@ -21,8 +23,10 @@
 		5372CDDDA7FAE0E40319695E /* Pods-AWSNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSNotes.release.xcconfig"; path = "Target Support Files/Pods-AWSNotes/Pods-AWSNotes.release.xcconfig"; sourceTree = "<group>"; };
 		71507DD1A601048380955600 /* Pods_AWSNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF42A70AA409D5CF41BA2CB9 /* Pods-AWSNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSNotes.debug.xcconfig"; path = "Target Support Files/Pods-AWSNotes/Pods-AWSNotes.debug.xcconfig"; sourceTree = "<group>"; };
-		DA453BCF22F28DCB00C7E45C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		DA22E36422F3D06200813A69 /* boarder terrier .jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "boarder terrier .jpg"; sourceTree = "<group>"; };
+		DA22E36622F3DDC900813A69 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
 		DA453BD522F28E9300C7E45C /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		DA453BD722F3336600C7E45C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		DA8C9CA022F261FB0008018B /* AWSNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8C9CA322F261FB0008018B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA8C9CA522F261FB0008018B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,11 +102,13 @@
 		DA8C9CA222F261FB0008018B /* AWSNotes */ = {
 			isa = PBXGroup;
 			children = (
+				DA22E36422F3D06200813A69 /* boarder terrier .jpg */,
 				DA453BD322F28E9300C7E45C /* Models */,
-				DA453BCF22F28DCB00C7E45C /* awsconfiguration.json */,
 				DA8C9CA322F261FB0008018B /* AppDelegate.swift */,
+				DA453BD722F3336600C7E45C /* awsconfiguration.json */,
 				DA8C9CA522F261FB0008018B /* ViewController.swift */,
 				DA8C9CA722F261FB0008018B /* Main.storyboard */,
+				DA22E36622F3DDC900813A69 /* cat.jpg */,
 				DA8C9CAA22F261FE0008018B /* Assets.xcassets */,
 				DA8C9CAC22F261FE0008018B /* LaunchScreen.storyboard */,
 				DA8C9CAF22F261FE0008018B /* Info.plist */,
@@ -170,9 +176,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA453BD022F28DCB00C7E45C /* awsconfiguration.json in Resources */,
+				DA22E36722F3DDC900813A69 /* cat.jpg in Resources */,
+				DA453BD822F3336600C7E45C /* awsconfiguration.json in Resources */,
 				DA8C9CAE22F261FE0008018B /* LaunchScreen.storyboard in Resources */,
 				DA8C9CAB22F261FE0008018B /* Assets.xcassets in Resources */,
+				DA22E36522F3D06200813A69 /* boarder terrier .jpg in Resources */,
 				DA8C9CA922F261FB0008018B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

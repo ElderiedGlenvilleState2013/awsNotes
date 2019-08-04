@@ -11,5 +11,7 @@ target 'AWSNotes' do
     pod 'AWSUserPoolsSignIn'
     pod 'AWSAuthUI'
     pod 'AWSDynamoDB'
+    pod 'AWSS3'
+    pod 'AWSCognito'
 
 end

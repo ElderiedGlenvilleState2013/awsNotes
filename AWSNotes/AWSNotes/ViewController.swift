@@ -11,18 +11,24 @@ import AWSAuthUI
 import AWSAuthCore
 import AWSCore
 import AWSDynamoDB
+import AWSS3
+import AWSCognito
 
 class ViewController: UIViewController {
 
+    
+    
     @IBOutlet weak var noteTxt: UITextField!
     
     @IBOutlet weak var noteLbl: UILabel!
     
+    @IBOutlet weak var img: UIImageView!
+    
     @IBAction func sendBtnWasPressed(_ sender: Any) {
         
         createNote(noteTxt.text!)
-        
-        //let qNote = queryNotes()
+        endTouching()
+        noteLbl.text = "\(queryNotes())"
         
     }
     
@@ -43,6 +49,16 @@ class ViewController: UIViewController {
         checkForLogin()
     }
     
+   
+    
+    func endTouching(){
+        self.view.endEditing(true)
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
     func checkForLogin(){
         if !AWSSignInManager.sharedInstance().isLoggedIn{
             AWSAuthUIViewController.presentViewController(with: self.navigationController!, configuration: nil) { (provider, error) in
@@ -58,10 +74,12 @@ class ViewController: UIViewController {
             //createNote("100")
             //createNote("125")
             //createNote("101")
-            //loadNote("123")
+            //loadNote(noteLbl.text!)
            // updateNote("123", "updated note")
            // deleteNote("123")
-            queryNotes()
+            //queryNotes()
+            downloadData()
+            uploadFile()
         }
     }
 
@@ -141,6 +159,45 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    
+    func downloadData() {
+        var completionHandler : AWSS3TransferUtilityDownloadCompletionHandlerBlock?
+        completionHandler = { (task, URL, data, error) in
+            DispatchQueue.main.async {
+                let iv = UIImageView.init(frame: self.view.bounds)
+                iv.contentMode = .scaleAspectFit
+                iv.image = UIImage.init(data: data!)
+                self.view.addSubview(iv)
+            }
+        }
+        
+        let tUtil = AWSS3TransferUtility.default()
+        tUtil.downloadData(forKey: "public/pic.jpg", expression: nil, completionHandler: completionHandler)
+        
+    }
+    
+    func uploadFile() {
+        var completionHandler : AWSS3TransferUtilityUploadCompletionHandlerBlock?
+        completionHandler = { (task,error) in
+            print (task.response?.statusCode ?? "0")
+            print (error?.localizedDescription ?? "no error")
+        }
+        
+        let exp = AWSS3TransferUtilityUploadExpression()
+        exp.progressBlock = {(task,progress) in
+            DispatchQueue.main.async {
+                // update UI
+                print(progress.fractionCompleted)
+            }
+        }
+        
+        let data = #imageLiteral(resourceName: "boston terrier").jpegData(compressionQuality: 0.5)
+        
+        let tUtil = AWSS3TransferUtility.default()
+        tUtil.uploadData(data!, key: "public/pic.jpg", contentType: "image/jpg", expression: exp, completionHandler: completionHandler)
+    }
+    
 
 }
 
